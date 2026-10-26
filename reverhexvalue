@@ -1,0 +1,9 @@
+//Check 
+SELECT card_id, SUBSTR(card_id, 7, 2) || SUBSTR(card_id, 5, 2) || SUBSTR(card_id, 3, 2) || SUBSTR(card_id, 1, 2) AS card_id2 FROM card_master WHERE LENGTH(card_id) = 8;
+
+
+//Update
+
+UPDATE card_master set card_id2 = SUBSTR(card_id, 7, 2) || SUBSTR(card_id, 5, 2) || SUBSTR(card_id, 3, 2) || SUBSTR(card_id, 1, 2) WHERE LENGTH(card_id) = 8;
+
+//commit
